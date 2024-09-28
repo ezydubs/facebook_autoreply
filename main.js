@@ -163,7 +163,7 @@ function sleep(ms) {
 
 function startListening() {
     return new Promise((resolve, reject) => {
-        login({ appState: JSON.parse(fs.readFileSync("fbstate2.json", "utf8")) },async (err, api) => {
+        login({ appState: JSON.parse(fs.readFileSync("fbstate.json", "utf8")) },async (err, api) => {
             if (err) return console.error(err);
     
             api.setOptions({
